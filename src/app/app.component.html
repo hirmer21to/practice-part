@@ -1,0 +1,87 @@
+<div>
+	<h2>Bindings</h2>
+	<p>
+    Start editing to see some magic happen :)
+    All changes need to be set in the app.component.html. You don't need to edit the app.component.ts.
+	</p>
+</div>
+
+<div>
+	<h4>1. Property Binding</h4>
+	<p>
+		Beneath you see two input fields. As you know they can have placeholders before someone typed something. Try to use the provided
+		text (line 12) and method (line 9) in the <code>app.component.ts</code> to set the placeholder property of the two input fields in the <code>app.component.html</code>.
+  </p>
+  <div class="ui message">
+    <div class="ui input">
+    <p>Try the property binding here:</p>
+    <!-- change something in the input field -->
+    <input >
+    </div>
+
+    <div class="ui input">  
+    <p>Try the property binding here:</p>
+    <!-- change something in the input field -->
+    <input >
+    </div>
+  </div>
+</div>
+
+<div>
+  <h4>2. Interpolation </h4>
+  <p>
+    Beneath you see a <code>p</code>-tag, use it to display the string <code>'tryInterpolation'</code> from the <code>app.component.ts</code>.
+  </p>
+  <div class="ui message">
+    <p>Try the interpolation here:</p>
+    <!-- add the interpolation into the p-element -->
+    <p class="ui message"> </p>
+  </div>
+</div>
+
+<div>
+  <h4>3. Event Binding </h4>
+  <p>
+    Beneath you see the <code>button</code>s, use them with the methods from the <code>app.component.ts</code> to change the number in between.
+  </p>
+  <div class="ui message">
+    <!-- add an event-binding to the button -->
+    <button class="ui button"> - </button>
+    <p class="ui input">{{num}}</p>
+    <!-- add an event-binding to the button -->
+    <button class="ui button"> + </button>
+  </div>
+</div>
+
+<div>
+  <h4>4. Two-Way Binding</h4>
+  <p>
+    Beneath you see this form. In the <code>p</code> you say "My name is ..." and with the input you should change it by typing another name. Use the variable <code>name</code> from the <code>app.component.ts</code>.
+  </p>
+  <div class="ui message"> 
+    <div class="ui form">
+      <!-- add an interpolation at the end of the string-->
+      <p>My name is </p>
+      <div class="field">
+        <label>Name:</label>
+        <!-- add a two-way binding to the input-field -->
+        <input >
+      </div> 
+    </div>
+  </div>
+</div>
+
+<div>
+  <h4>5. Local Template-Variables</h4>
+  <p> Prepare the input field that you can read out it's value. There is already a function prepared to show the value of the input field below when you click the button.
+  </p>
+  <div class="ui message">
+    <div class="ui input">
+      <!-- define local template variable in the input-field -->
+      <input >
+      <!-- update the parameter of the getInfo-Method to hand over the value of the input-field-->
+      <button (click)="getInfo('Nope')">Click!</button>
+    </div>
+    <p>{{result}}</p>
+  </div>
+</div>

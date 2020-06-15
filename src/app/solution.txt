@@ -1,0 +1,77 @@
+<div>
+	<h2>Bindings</h2>
+	<p>
+		Start editing to see some magic happen :)
+	</p>
+</div>
+
+<div>
+	<h4>1. Property Binding</h4>
+	<p>
+		Beneath you see two input fields. As you know they can have placeholders before someone typed something. Try to use the provided
+		text and method in the <code>app.component.ts</code> to set the placeholder property.
+  </p>
+  <div class="ui message">
+    <div class="ui input">
+    <p>Try the property binding here:</p>
+    <input [placeholder]="text">
+    </div>
+
+    <div class="ui input">  
+    <p>Try the property binding here:</p>
+    <input [placeholder]="method()">
+    </div>
+  </div>
+</div>
+
+<div>
+  <h4>2. Interpolation </h4>
+  <p>
+    Beneath you see a <code>p</code>-tag, use it to display a string from the <code>app.component.ts</code>.
+  </p>
+  <div class="ui message">
+    <p>Try the interpolation here:</p>
+    <p class="ui message">{{tryInterpolation}}</p>
+  </div>
+</div>
+
+<div>
+  <h4>3. Event Binding </h4>
+  <p>
+    Beneath you see the <code>button</code>s, use them with the methods from the <code>app.component.ts</code> to change the number in between.
+  </p>
+  <div class="ui message">
+    <button class="ui button" (click)="decreaseNum()"> - </button>
+    <p class="ui input">{{num}}</p>
+    <button class="ui button" (click)="increaseNum()"> + </button>
+  </div>
+</div>
+
+<div>
+  <h4>4. Two-Way Binding</h4>
+  <p>
+    Beneath you see this form. In the <code>p</code> you say "My name is ..." and with the input you should change it by typing another name. Use the variable <code>name</code> from the <code>app.component.ts</code>.
+  </p>
+  <div class="ui message"> 
+    <div class="ui form">
+      <p>My name is {{name}}</p>
+      <div class="field">
+        <label>Name:</label>
+        <input [(ngModel)]="name">
+      </div> 
+    </div>
+  </div>
+</div>
+
+<div>
+  <h4>5. Local Template-Variables</h4>
+  <p> Prepare the input field that you can read out it's value. There is already a function prepared to show the value of the input field below when you click the button.
+  </p>
+  <div class="ui message">
+    <div class="ui input">
+      <input #info>
+      <button (click)="getInfo(info.value)">Click!</button>
+    </div>
+    <p>{{result}}</p>
+  </div>
+</div>
